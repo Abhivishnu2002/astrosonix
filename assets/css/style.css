@@ -4650,3 +4650,14 @@ section.as_testimonial_wrapper {
 .as_service_box:hover h4, .as_service_box:hover p {
     color: #000000 !important;
 }
+
+/* Service Box Icons around Hand */
+.as_service_inner_icon svg,
+.as_service_inner_icon svg * {
+    fill: #d4a967 !important;
+    transition: fill 0.3s ease-in-out;
+}
+.as_service_box:hover .as_service_inner_icon svg,
+.as_service_box:hover .as_service_inner_icon svg * {
+    fill: #000000 !important;
+}
