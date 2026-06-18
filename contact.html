@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Astrosonix</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- ✅ Link preview description for WhatsApp, Facebook, Twitter -->
+<meta property="og:description" content="Astrosonix helps you discover your life’s purpose, navigate challenges, and make empowered decisions. It’s more than prediction—it’s a journey of self-awareness, spiritual growth, and cosmic alignment." />
+<meta name="twitter:description" content="Astrosonix helps you discover your life’s purpose, navigate challenges, and make empowered decisions. It’s more than prediction—it’s a journey of self-awareness, spiritual growth, and cosmic alignment." />
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <link href="assets/css/font.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/js/swiper-bundle.min.js"/>
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+      <!-- favicon -->
+      <link rel="shortcut icon" href="assets/images/loader.png" type="image/x-icon">
+       <!-- ✅ Include Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<!-- ✅ Firebase Config -->
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDrNFVT6ajWbJO_dIR1lzTv4dbZ3oAf9Lc",
+    authDomain: "astrovia-749d3.firebaseapp.com",
+    projectId: "astrovia-749d3",
+    storageBucket: "astrovia-749d3.firebasestorage.app",
+    messagingSenderId: "100447697359",
+    appId: "1:100447697359:web:1a91bdfe88571aeac57aba",
+    measurementId: "G-8F3SQJ4GG5"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+   </head>
+   <body>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <div class="as_loader">
+         <div class="as_spinner">
+            <img src="assets/images/loader.png" alt="" class="img-responsive">
+         </div>
+      </div>
+      <div class="as_main_wrapper">
+         <section class="as_header_wrapper">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                     <div class="as_logo">
+                        <a href="index.html">
+                        <img src="assets/img/Frame 1000001281.png" style="width: 130px;" alt="">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-6">
+                     <div class="as_right_info">
+                        <div class="as_menu_wrapper">
+                           <span class="as_toggle">
+                           <img src="assets/images/svg/menu.svg" alt="">
+                           </span>
+                           <div class="as_menu">
+                              <ul>
+                                 <li><a href="index.html" class="active">home</a></li>
+                                 <li><a href="about.html">about us</a></li>
+                                 <!-- <li>
+                                    <a href="javascript:;">pages</a><span class="as_submenu_arrow"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="15" height="15" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M54.921 20.297a1 1 0 0 0-.92-.611H10a1 1 0 0 0-.718 1.698l22 22.627a1 1 0 0 0 1.434 0l22-22.628a1 1 0 0 0 .204-1.086z" fill="#ffffff" data-original="#000000" class=""></path></g></svg></span>
+                                    <ul class="as_submenu">
+                                       <li><a href="service.html">service</a></li>
+                                       <li><a href="service_single.html">service single</a></li>
+                                       <li><a href="appointments.html">appointment</a></li>
+                                       <li><a href="pricing.html">pricing plans</a></li>
+                                       <li><a href="error.html">404</a></li>
+                                    </ul>
+                                 </li> -->
+                                 <!-- <li>
+                                    <a href="javascript:;">shop</a><span class="as_submenu_arrow"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="15" height="15" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M54.921 20.297a1 1 0 0 0-.92-.611H10a1 1 0 0 0-.718 1.698l22 22.627a1 1 0 0 0 1.434 0l22-22.628a1 1 0 0 0 .204-1.086z" fill="#ffffff" data-original="#000000" class=""></path></g></svg></span>
+                                    <ul class="as_submenu">
+                                       <li><a href="shop.html">Shop</a></li>
+                                       <li><a href="shop_single.html">Shop Single</a></li>
+                                    </ul>
+                                 </li> -->
+                                 <!-- <li>
+                                    <a href="javascript:;">blog</a><span class="as_submenu_arrow"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="15" height="15" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M54.921 20.297a1 1 0 0 0-.92-.611H10a1 1 0 0 0-.718 1.698l22 22.627a1 1 0 0 0 1.434 0l22-22.628a1 1 0 0 0 .204-1.086z" fill="#ffffff" data-original="#000000" class=""></path></g></svg></span>
+                                    <ul class="as_submenu">
+                                       <li><a href="blog.html">blog</a></li>
+                                       <li><a href="blog_single.html">blog single</a></li>
+                                    </ul>
+                                 </li> -->
+                                
+                                 <li><a href="contact.html">contact</a></li>
+                                 <a href="#" class="btn btn-outline-warning ms-3 px-4 py-1 rounded-pill" style="border-color: #d4a967; color: #d4a967;" data-bs-toggle="modal" data-bs-target="#signInModal">
+Login
+</a>
+
+  <a href="#" class="btn btn-outline-warning ms-2 px-4 py-1 rounded-pill" style="border-color: #d4a967; color: #d4a967;" onclick="toggleChatPopup()">Live Chat</a>
+</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+<!-- Sign In Modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 400px; width: 90%;">
+    <div class="modal-content rounded-3">
+
+      <!-- Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title fw-bold" id="signInLabel">Login with Phone</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body text-center">
+
+        <!-- 🔄 Toggle login type -->
+        <div class="form-check form-switch text-start mb-3">
+          <input class="form-check-input" type="checkbox" id="toggleLoginMethod" onchange="toggleLoginMethod()">
+          <label class="form-check-label" for="toggleLoginMethod">Login with Email</label>
+        </div>
+
+        <!-- 📱 Phone Login -->
+        <div id="phoneLoginSection">
+          <p class="mb-3">You will receive a 6-digit code for verification</p>
+
+          <label class="form-label fw-semibold text-start w-100">Phone Number</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text px-2"><img src="https://flagcdn.com/w40/in.png" alt="IN" width="20"></span>
+            <span class="input-group-text">+91</span>
+            <input type="tel" id="signInPhone" class="form-control" placeholder="Enter mobile no." maxlength="10">
+          </div>
+
+          <button class="btn w-100 py-2 fw-bold text-dark mb-2" style="background-color: #d4a967;" onclick="sendSignInOTP()">
+            GET OTP <span class="ms-2">➡️</span>
+          </button>
+
+          <div id="otpSection" class="mt-3 d-none">
+            <input type="text" id="otpInput" class="form-control mb-2" maxlength="6" placeholder="Enter OTP">
+            <button class="btn btn-success w-100" onclick="verifySignInOTP()">Verify OTP</button>
+          </div>
+        </div>
+
+       <!-- 📧 Email Login -->
+<div id="emailLoginSection" style="display: none;">
+  <label class="form-label fw-semibold text-start w-100">Email Address</label>
+  <input type="email" id="loginEmail" class="form-control mb-2" placeholder="Enter your email" required>
+
+  <button class="btn w-100 py-2 fw-bold text-dark mb-2" style="background-color: #d4a967;" onclick="sendEmailOTP()">
+    SEND OTP <span class="ms-2">📩</span>
+  </button>
+
+  <div id="emailOtpSection" class="mt-3 d-none">
+    <input type="text" id="emailOtpInput" class="form-control mb-2" maxlength="6" placeholder="Enter OTP">
+    <button class="btn btn-success w-100" onclick="verifyEmailOTP()">Verify OTP</button>
+  </div>
+</div>
+
+
+        <!-- Terms & Link -->
+        <p class="mt-3" style="font-size: 12px;">
+          By Signing in, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+        </p>
+        <p class="mt-3 mb-0" style="font-size: 18px;">
+          Don't have an account?
+          <a href="#" class="fw-semibold text-decoration-none" style="color: #d4a967;" data-bs-toggle="modal" data-bs-target="#signUpModal" data-bs-dismiss="modal">Sign up</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Invisible recaptcha container -->
+<div id="recaptcha-container"></div>
+
+<!-- JavaScript -->
+<script>
+  let signInConfirmationResult = null;
+  let currentUserId = null;
+
+  // 🔁 Toggle phone/email login
+  function toggleLoginMethod() {
+    const isEmailLogin = document.getElementById("toggleLoginMethod").checked;
+
+    document.getElementById("phoneLoginSection").style.display = isEmailLogin ? "none" : "block";
+    document.getElementById("emailLoginSection").style.display = isEmailLogin ? "block" : "none";
+
+    document.getElementById("signInLabel").textContent = isEmailLogin ? "Login with Email" : "Login with Phone";
+  }
+
+  // 📲 Check phone in backend → then send OTP
+  function sendSignInOTP() {
+    const phone = document.getElementById("signInPhone").value.trim();
+
+    if (phone.length !== 10 || !/^\d+$/.test(phone)) {
+      alert("⚠️ Enter valid 10-digit number.");
+      return;
+    }
+
+    // ✅ Step 1: Check login API
+    fetch("https://razal.pythonanywhere.com/api/login/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ identifier: phone })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.message === "Login success") {
+        currentUserId = data.user_id;
+
+        // ✅ Step 2: Send Firebase OTP
+        const fullPhone = "+91" + phone;
+        window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+          size: 'invisible'
+        });
+
+        return firebase.auth().signInWithPhoneNumber(fullPhone, window.recaptchaVerifier);
+      } else {
+        throw new Error("Phone number not found or not registered.");
+      }
+    })
+    .then((confirmationResult) => {
+      signInConfirmationResult = confirmationResult;
+      document.getElementById("otpSection").classList.remove("d-none");
+      alert("✅ OTP sent! Please check your phone.");
+    })
+    .catch((error) => {
+      alert("❌ Login error: " + error.message);
+      console.error(error);
+    });
+  }
+
+  // ✅ Step 3: Verify OTP
+  function verifySignInOTP() {
+    const otp = document.getElementById("otpInput").value.trim();
+
+    if (!otp || !signInConfirmationResult) {
+      alert("⚠️ Please enter the OTP.");
+      return;
+    }
+
+    signInConfirmationResult.confirm(otp)
+      .then((result) => {
+        const user = result.user;
+
+        alert("✅ Phone verified! User ID: " + currentUserId);
+        // TODO: Store user ID or redirect to dashboard, etc.
+      })
+      .catch((error) => {
+        alert("❌ Invalid OTP: " + error.message);
+      });
+  }
+</script>
+
+<!-- login Email Script -->
+ <script>
+  let emailLoginUserId = null;
+
+  // 📧 Step 1: Send OTP to email using SMTP backend
+  function sendEmailOTP() {
+    const email = document.getElementById("loginEmail").value.trim();
+    if (!email || !email.includes("@")) {
+      alert("⚠️ Enter valid email address.");
+      return;
+    }
+
+    fetch("https://razal.pythonanywhere.com/api/send_email_otp/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.message?.toLowerCase().includes("otp sent")) {
+        document.getElementById("emailOtpSection").classList.remove("d-none");
+        alert("✅ OTP sent to email.");
+      } else {
+        alert("❌ " + (data.message || "Failed to send OTP"));
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert("❌ Failed to send OTP");
+    });
+  }
+
+  // 📧 Step 2: Verify Email OTP
+  function verifyEmailOTP() {
+    const email = document.getElementById("loginEmail").value.trim();
+    const otp = document.getElementById("emailOtpInput").value.trim();
+
+    if (!otp || !email) {
+      alert("⚠️ Please enter both email and OTP.");
+      return;
+    }
+
+    fetch("https://razal.pythonanywhere.com/api/verify_email_otp/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, otp: otp })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.message === "Login success") {
+        emailLoginUserId = data.user_id;
+        alert("✅ Email login successful! User ID: " + emailLoginUserId);
+        // TODO: Store user or redirect
+      } else {
+        alert("❌ " + data.message);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert("❌ OTP verification failed");
+    });
+  }
+</script>
+
+
+
+
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 400px; width: 90%;">
+    <div class="modal-content rounded-3">
+
+      <!-- Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title fw-bold" id="signUpLabel">Create an Account</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+    
+     <!-- 🔽 Registration Form -->
+<div class="modal-body text-center">
+  <!-- Full Name -->
+  <label class="form-label fw-semibold text-start w-100">Full Name</label>
+  <input type="text" id="signup-name" class="form-control mb-3" placeholder="Enter your name" required>
+
+  <!-- Email -->
+  <label class="form-label fw-semibold text-start w-100">Email</label>
+  <input type="email" id="signup-email" class="form-control mb-3" placeholder="Enter your email" required>
+
+  <!-- Phone -->
+  <label class="form-label fw-semibold text-start w-100">Phone Number</label>
+  <div class="input-group mb-3">
+    <span class="input-group-text px-2"><img src="https://flagcdn.com/w40/in.png" alt="IN" width="20"></span>
+    <span class="input-group-text">+91</span>
+    <input type="tel" id="signup-phone" class="form-control" placeholder="Enter mobile no." maxlength="10" required>
+  </div>
+
+  <!-- Register Button -->
+  <button id="send-otp-btn" class="btn w-100 py-2 fw-bold text-dark" style="background-color: #d4a967;" onclick="registerUser()">
+    REGISTER <span class="ms-2">✅</span>
+  </button>
+
+  <!-- Recaptcha Container (invisible) -->
+  <div id="recaptcha-container"></div>
+
+  <!-- OTP Input Section -->
+  <div id="otp-section" class="mt-4" style="display: none;">
+    <label class="form-label fw-semibold text-start w-100">Enter OTP</label>
+    <input type="text" id="otp-input" class="form-control mb-3" maxlength="6" placeholder="Enter OTP">
+    <button class="btn w-100 py-2 fw-bold text-white" style="background-color: #28a745;" onclick="verifyOtp()">
+      VERIFY OTP ✅
+    </button>
+  </div>
+</div>
+
+        <p class="mt-3" style="font-size: 12px;">
+          By Signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  let confirmationResultGlobal = null;
+
+  function registerUser() {
+    const name = document.getElementById("signup-name").value.trim();
+    const email = document.getElementById("signup-email").value.trim();
+    const phone = document.getElementById("signup-phone").value.trim();
+
+    if (!name || !email || phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+      alert("⚠️ Please fill in all fields correctly.");
+      return;
+    }
+
+    const fullPhone = "+91" + phone;
+
+    // ✅ Setup reCAPTCHA
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+      size: 'invisible',
+      callback: function (response) {
+        // reCAPTCHA solved
+      }
+    });
+
+    // ✅ Send OTP
+    firebase.auth().signInWithPhoneNumber(fullPhone, window.recaptchaVerifier)
+      .then((confirmationResult) => {
+        confirmationResultGlobal = confirmationResult;
+        document.getElementById("otp-section").style.display = "block";
+        alert("✅ OTP sent to " + fullPhone);
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("❌ OTP send failed: " + error.message);
+      });
+  }
+
+  function verifyOtp() {
+    const otp = document.getElementById("otp-input").value.trim();
+    const name = document.getElementById("signup-name").value.trim();
+    const email = document.getElementById("signup-email").value.trim();
+    const phone = document.getElementById("signup-phone").value.trim();
+
+    if (!otp || !confirmationResultGlobal) {
+      alert("⚠️ Enter OTP to verify");
+      return;
+    }
+
+    confirmationResultGlobal.confirm(otp)
+      .then((result) => {
+        const user = result.user;
+        alert("✅ Phone verified!");
+
+        // ✅ Send data to API
+        fetch("https://razal.pythonanywhere.com/api/signup/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            full_name: name,
+            phone_number: phone,
+            email: email
+          })
+        })
+        .then(res => res.json())
+        .then(data => {
+          alert("✅ " + data.message);
+        })
+        .catch(err => {
+          console.error(err);
+          alert("❌ Signup API failed");
+        });
+
+      })
+      .catch((error) => {
+        alert("❌ Incorrect OTP: " + error.message);
+      });
+  }
+</script>
+
+
+<div id="chatPopup" class="chat-popup shadow-lg" style="display: none;">
+  <div class="card" style="width: 300px; border-radius: 15px;">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <span>Astrosonix Live Chat</span>
+      <button type="button" class="btn-close btn-close-white" aria-label="Close" onclick="toggleChatPopup()"></button>
+    </div>
+    <div class="card-body" style="height: 200px; overflow-y: auto;">
+      <p class="text-muted">Chat feature coming soon...</p>
+    </div>
+    <div class="card-footer">
+      <input type="text" class="form-control" placeholder="Type a message..." disabled>
+    </div>
+  </div>
+</div>
+<style>.chat-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1050;
+}</style>
+<script>
+  function toggleChatPopup() {
+    const chat = document.getElementById("chatPopup");
+    chat.style.display = chat.style.display === "none" ? "block" : "none";
+  }
+
+  function sendMessage() {
+    const input = document.getElementById("userInput");
+    const message = input.value.trim();
+    if (!message) return;
+
+    const chatBody = document.getElementById("chatBody");
+    chatBody.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
+    input.value = "";
+
+    // Simple Bot Reply
+    let reply = "I'm still learning!";
+    if (message.toLowerCase().includes("hello") || message.toLowerCase().includes("hi")) {
+      reply = "Hello! How can I help you today?";
+    } else if (message.toLowerCase().includes("love")) {
+      reply = "I see you're curious about love! Would you like a compatibility reading?";
+    } else if (message.toLowerCase().includes("career")) {
+      reply = "Career questions are important. Would you like a tarot or astrological reading?";
+    }
+
+    setTimeout(() => {
+      chatBody.innerHTML += `<div><strong>Bot:</strong> ${reply}</div>`;
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 500);
+  }
+</script>
+
+         <section class="as_breadcrum_wrapper">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12 text-center">
+                     <h1>Contact Us</h1>
+                     <ul class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li>Contact</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="as_contact_wrapper   as_section_light">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12 text-center">
+                     <h1 class="as_heading as_heading_center">get in touch with us!</h1>
+                     <span class="as_title_line">
+                        <svg 
+                           xmlns="http://www.w3.org/2000/svg"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           width="193px" height="21px">
+                           <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                              d="M188.852,19.425 L185.832,16.418 L177.218,16.418 C176.896,17.339 176.018,18.001 174.984,18.001 C173.949,18.001 173.071,17.339 172.749,16.418 L170.782,16.418 C170.503,16.941 169.951,17.298 169.314,17.298 C168.677,17.298 168.125,16.941 167.846,16.418 L155.583,16.418 C155.261,17.339 154.383,18.001 153.349,18.001 C152.314,18.001 151.436,17.339 151.114,16.418 L149.147,16.418 C148.868,16.941 148.316,17.298 147.679,17.298 C147.042,17.298 146.490,16.941 146.211,16.418 L136.245,16.418 L136.245,14.868 L146.211,14.868 C146.490,14.344 147.042,13.987 147.679,13.987 C148.316,13.987 148.868,14.344 149.147,14.868 L151.114,14.868 C151.436,13.947 152.314,13.284 153.349,13.284 C154.383,13.284 155.261,13.947 155.583,14.868 L167.846,14.868 C168.125,14.344 168.677,13.987 169.314,13.987 C169.951,13.987 170.503,14.344 170.782,14.868 L172.749,14.868 C173.071,13.947 173.949,13.284 174.984,13.284 C176.018,13.284 176.896,13.947 177.218,14.868 L185.132,14.868 L188.852,11.163 L193.000,15.294 L188.852,19.425 ZM128.736,20.194 C127.557,20.835 126.143,21.176 124.757,20.897 C123.398,20.617 122.192,19.831 121.458,18.689 C121.093,18.118 120.880,17.457 120.844,16.780 C120.809,16.099 120.996,15.446 121.304,14.890 C121.612,14.331 122.061,13.865 122.583,13.536 C123.112,13.216 123.735,13.072 124.314,13.128 C123.135,13.282 122.292,14.207 121.963,15.186 C121.611,16.189 121.842,17.221 122.499,17.947 C123.122,18.685 124.082,19.149 125.011,19.213 C125.929,19.277 126.895,18.995 127.693,18.450 C129.309,17.367 130.316,15.431 130.284,13.527 C130.275,12.580 130.047,11.681 129.555,10.915 C129.069,10.146 128.353,9.501 127.544,9.142 C126.749,8.763 125.863,8.660 124.945,8.825 C124.030,8.995 123.112,9.424 122.240,9.989 C120.459,11.079 119.045,12.857 117.271,14.481 C116.393,15.293 115.438,16.096 114.336,16.707 C113.228,17.309 112.050,17.725 110.836,17.941 C108.429,18.352 105.811,17.946 103.952,16.480 C106.100,17.426 108.459,17.375 110.532,16.695 C111.573,16.367 112.559,15.878 113.421,15.260 C114.280,14.631 115.069,13.887 115.814,13.051 C116.561,12.218 117.284,11.324 118.096,10.448 C118.893,9.566 119.808,8.683 120.843,7.946 C121.879,7.205 123.093,6.610 124.456,6.321 C125.811,6.038 127.347,6.167 128.654,6.779 C129.953,7.393 131.008,8.389 131.736,9.583 C132.468,10.783 132.831,12.216 132.759,13.578 C132.636,16.292 131.139,18.911 128.736,20.194 ZM108.887,15.270 C107.246,15.973 105.536,16.364 103.818,16.480 C105.398,15.806 106.932,15.098 108.263,14.157 C109.605,13.238 110.727,12.106 111.473,10.801 C112.196,9.484 112.618,8.019 112.443,6.653 C112.350,5.966 112.191,5.353 111.840,4.783 C111.498,4.220 111.040,3.706 110.498,3.335 C109.965,2.958 109.367,2.674 108.766,2.602 C108.169,2.506 107.579,2.585 106.967,2.830 C105.749,3.307 104.635,4.462 104.008,5.700 C103.700,6.331 103.550,7.018 103.576,7.692 C103.601,8.375 103.829,9.078 104.255,9.630 C104.663,10.207 105.297,10.590 106.058,10.712 C106.809,10.831 107.655,10.671 108.317,10.114 C107.421,11.675 104.822,11.934 103.322,10.512 C102.573,9.839 102.090,8.916 101.874,7.932 C101.657,6.927 101.794,5.891 102.105,4.953 C102.422,4.010 102.933,3.156 103.579,2.426 C104.220,1.692 105.002,1.042 105.943,0.579 C106.874,0.115 108.022,-0.087 109.109,0.046 C110.199,0.173 111.189,0.628 112.036,1.223 C112.875,1.836 113.554,2.628 114.064,3.523 C114.574,4.415 114.869,5.475 114.911,6.469 C114.989,8.493 114.306,10.411 113.178,11.913 C112.066,13.453 110.502,14.545 108.887,15.270 ZM96.222,16.983 C94.201,16.983 92.562,15.351 92.562,13.338 C92.562,11.325 94.201,9.694 96.222,9.694 C98.243,9.694 99.881,11.325 99.881,13.338 C99.881,15.351 98.243,16.983 96.222,16.983 ZM89.677,10.512 C88.177,11.934 85.579,11.675 84.682,10.114 C85.344,10.671 86.191,10.831 86.941,10.712 C87.703,10.590 88.337,10.207 88.744,9.630 C89.171,9.078 89.398,8.375 89.424,7.692 C89.449,7.018 89.299,6.331 88.991,5.700 C88.364,4.462 87.250,3.307 86.032,2.830 C85.421,2.585 84.831,2.506 84.234,2.602 C83.632,2.674 83.034,2.958 82.502,3.335 C81.959,3.706 81.501,4.220 81.159,4.783 C80.808,5.353 80.649,5.966 80.556,6.653 C80.382,8.019 80.803,9.484 81.526,10.801 C82.273,12.106 83.394,13.238 84.736,14.157 C86.068,15.098 87.601,15.806 89.181,16.480 C87.464,16.364 85.754,15.973 84.113,15.270 C82.498,14.545 80.934,13.453 79.822,11.913 C78.693,10.411 78.010,8.493 78.088,6.469 C78.131,5.475 78.426,4.415 78.935,3.523 C79.446,2.628 80.124,1.836 80.964,1.223 C81.810,0.628 82.800,0.173 83.891,0.046 C84.978,-0.087 86.126,0.115 87.057,0.579 C87.998,1.042 88.779,1.692 89.420,2.426 C90.066,3.156 90.577,4.010 90.894,4.953 C91.206,5.891 91.342,6.927 91.125,7.932 C90.909,8.916 90.426,9.839 89.677,10.512 ZM82.468,16.695 C84.541,17.375 86.899,17.426 89.047,16.480 C87.189,17.946 84.571,18.352 82.164,17.941 C80.950,17.725 79.772,17.309 78.663,16.707 C77.562,16.096 76.606,15.293 75.729,14.481 C73.954,12.857 72.541,11.079 70.759,9.989 C69.887,9.424 68.969,8.995 68.054,8.825 C67.136,8.660 66.250,8.763 65.456,9.142 C64.646,9.501 63.931,10.146 63.445,10.915 C62.952,11.681 62.724,12.580 62.715,13.527 C62.683,15.431 63.691,17.367 65.306,18.450 C66.105,18.995 67.070,19.277 67.989,19.213 C68.918,19.149 69.877,18.685 70.500,17.947 C71.157,17.221 71.388,16.189 71.037,15.186 C70.708,14.207 69.864,13.282 68.685,13.128 C69.265,13.072 69.887,13.216 70.417,13.536 C70.938,13.865 71.388,14.331 71.695,14.890 C72.004,15.446 72.191,16.099 72.155,16.780 C72.119,17.457 71.906,18.118 71.541,18.689 C70.808,19.831 69.601,20.617 68.242,20.897 C66.856,21.176 65.443,20.835 64.263,20.194 C61.860,18.911 60.363,16.292 60.240,13.578 C60.169,12.216 60.532,10.783 61.263,9.583 C61.991,8.389 63.047,7.393 64.345,6.779 C65.652,6.167 67.188,6.038 68.543,6.321 C69.906,6.610 71.120,7.205 72.156,7.946 C73.192,8.683 74.106,9.566 74.904,10.448 C75.715,11.324 76.439,12.218 77.185,13.051 C77.930,13.887 78.719,14.631 79.578,15.260 C80.440,15.878 81.426,16.367 82.468,16.695 ZM45.320,17.298 C44.684,17.298 44.131,16.941 43.852,16.418 L41.885,16.418 C41.563,17.339 40.686,18.001 39.651,18.001 C38.616,18.001 37.739,17.339 37.416,16.418 L25.154,16.418 C24.874,16.941 24.322,17.298 23.685,17.298 C23.049,17.298 22.496,16.941 22.217,16.418 L20.250,16.418 C19.928,17.339 19.051,18.001 18.016,18.001 C16.981,18.001 16.104,17.339 15.781,16.418 L7.167,16.418 L4.147,19.425 L-0.001,15.294 L4.147,11.163 L7.867,14.868 L15.781,14.868 C16.103,13.947 16.981,13.284 18.016,13.284 C19.051,13.284 19.928,13.947 20.250,14.868 L22.217,14.868 C22.496,14.344 23.049,13.987 23.685,13.987 C24.322,13.987 24.875,14.344 25.154,14.868 L37.416,14.868 C37.738,13.947 38.616,13.284 39.651,13.284 C40.686,13.284 41.563,13.947 41.885,14.868 L43.852,14.868 C44.131,14.344 44.684,13.987 45.320,13.987 C45.957,13.987 46.510,14.344 46.789,14.868 L56.755,14.868 L56.755,16.418 L46.789,16.418 C46.510,16.941 45.957,17.298 45.320,17.298 Z"/>
+                        </svg>
+                     </span>
+                     <p class="as_text_color">Have questions or need personalized guidance?  <br>Our team of expert astrologers is here to help you every step of the way. Reach out today and start your journey to cosmic clarity.</p>
+                  </div>
+                  <div class="as_contact_page_top row">
+                     <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="as_contact_detail as_contact_detail_color ">
+                           <ul>
+                              <li class="as_info_box">
+                                 <span class="as_icon">
+                                 <img src="assets/images/svg/pin.svg" alt="">
+                                 </span>
+                                 <p>A/202, Brindaban Kunj, Exhibition Road, Near Landmark: C/o Diwakar Sandilya, Kadamkuan, Patna, Patna District, Bihar – 800001, India</p>
+                              </li>
+                              
+                              <li class="as_info_box">
+                                 <span class="as_icon">
+                                 <img src="assets/images/svg/message.svg" alt="">
+                                 </span>
+                                 <p><a href="javascript:;">Compliance.udysonix@outlook.com</a></p>
+                              </li>
+                           </ul>
+                           <div class="as_map">
+   <iframe 
+      src="https://maps.google.com/maps?q=Exhibition%20Road,%20Patna,%20Bihar%20800001&t=&z=15&ie=UTF8&iwloc=&output=embed"  
+      width="100%" 
+      height="318px" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+   </iframe>
+</div>
+
+
+
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-md-12">
+                        <form class="as_appointment_form">
+                           <div class="form-group">
+                              <input type="text" name="" value="" placeholder="Name" class="form-control">
+                           </div>
+                           <div class="form-group">
+                              <input type="text" name="" value="" placeholder="Last Name" class="form-control">
+                           </div>
+                           <div class="form-group">
+                              <input type="text" name="" value="" placeholder="Email Address" class="form-control">
+                           </div>
+                           <div class="form-group">
+                              <input type="text" placeholder="Subject" class="form-control">
+                           </div>
+                           <div class="form-group ">
+                              <textarea name="" class="form-control" placeholder="Message" id=""></textarea>
+                           </div>
+                           <a href="javascript:;" class="as_btn">Send Message</a>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+        <!-- Privacy Policy Modal -->
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 95%; margin: auto;">
+    <div class="modal-content rounded-3" style="background-color: #0b1437; color: white;">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title" id="privacyPolicyLabel">Privacy Policy</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="max-height: 75vh; overflow-y: auto;">
+        <p><strong>Privacy Policy</strong></p>
+        <p>
+  At <strong>Astrosonix</strong>, operated by UDYSONIX SERVICES PRIVATE LIMITED ("we", "our", or "us"), we are committed to protecting your privacy and ensuring that your personal information is handled with transparency, care, and respect. This Privacy Policy outlines the types of information we collect when you visit or interact with our website, mobile application, and related services (collectively referred to as the “Services”). It also explains how we use, store, and disclose this information in accordance with applicable laws and best industry practices. By accessing or using Astrosonix.in, you agree to the collection and use of your information as described in this Privacy Policy.
+</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="refundPolicyModal" tabindex="-1" aria-labelledby="refundPolicyLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 95%; margin: auto;">
+    <div class="modal-content rounded-3" style="background-color: #0b1437; color: white;">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title" id="refundPolicyLabel">Refund Policy</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="max-height: 75vh; overflow-y: auto;">
+        <p><strong>Refund Policy</strong></p>
+<p>
+  At <strong>Astrosonix</strong>, operated by UDYSONIX SERVICES PRIVATE LIMITED, we are dedicated to providing valuable, accurate, and personalized astrological services tailored to your unique needs. Each consultation, report, or reading is carefully prepared based on the information you provide, making our services highly customized and time-intensive. 
+</p>
+<p>
+  Due to the spiritual and personalized nature of astrology, all purchases made on Astrosonix.in are considered final and non-refundable. Once a service has been booked or delivered, we are unable to offer refunds, cancellations, or exchanges. We kindly ask that you review all service details, terms, and descriptions carefully before confirming your purchase.
+</p>
+<p>
+  However, we understand that exceptional situations may arise. Refunds may be granted at our sole discretion in rare cases such as duplicate payments, technical errors during the transaction process, or if a purchased service was not delivered due to unforeseen issues on our end. In such instances, users must contact our customer support team within 3 days of the transaction along with proof of payment and a valid reason for the refund request.
+</p>
+<p>
+  By using our services, you acknowledge and agree to this refund policy. We remain committed to ensuring customer satisfaction and will do our best to address your concerns fairly and transparently.
+</p>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Terms & Conditions Modal -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 95%; margin: auto;">
+    <div class="modal-content rounded-3" style="background-color: #0b1437; color: white;">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="max-height: 75vh; overflow-y: auto;">
+        <p><strong>Terms and Conditions</strong></p>
+<p>
+  By accessing or using <strong>Astrosonix</strong> (the "Platform"), you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. Astrosonix is owned and operated by UDYSONIX SERVICES PRIVATE LIMITED ("we", "our", or "us"). These terms govern your use of our website, mobile application, and all related services offered through the platform.
+</p>
+<p>
+  You must be at least 18 years of age or have the legal authority to enter into agreements in order to use our services. By continuing to use Astrosonix, you confirm that the information you provide is accurate and that you will not use the platform for any unlawful, harmful, or fraudulent purposes.
+</p>
+<p>
+  All astrological services, reports, and consultations offered through Astrosonix are intended for guidance and entertainment purposes only. We do not guarantee the accuracy of predictions or the outcome of any advice given. Users are solely responsible for how they interpret and use the information provided.
+</p>
+<p>
+  We reserve the right to modify, suspend, or discontinue any part of the service at any time without prior notice. Continued use of the platform after any changes to the Terms and Conditions constitutes your acceptance of those changes.
+</p>
+<p>
+  If you do not agree to any part of these Terms and Conditions, you should not use our website or services. For any concerns or questions, you may contact our support team.
+</p>
+
+        <!-- Optional: Add more sections here -->
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Cookies Policy Modal -->
+<div class="modal fade" id="cookiesPolicyModal" tabindex="-1" aria-labelledby="cookiesPolicyLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 95%; margin: auto;">
+    <div class="modal-content rounded-3" style="background-color: #0b1437; color: white;">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title" id="cookiesPolicyLabel">Cookies Policy</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="max-height: 75vh; overflow-y: auto;">
+        <p><strong>Cookies Policy</strong></p>
+<p>
+  <strong>Astrosonix</strong>, operated by UDYSONIX SERVICES PRIVATE LIMITED, uses cookies and similar tracking technologies to enhance your browsing experience, understand user behavior, and improve the functionality of our website. This Cookies Policy explains what cookies are, how we use them, and the choices you have regarding their use.
+</p>
+<p>
+  Cookies are small text files stored on your device when you visit a website. They help us remember your preferences, keep you logged in, understand how you interact with our content, and deliver personalized content and recommendations relevant to your interests.
+</p>
+<p>
+  We use both session cookies (which expire once you close your browser) and persistent cookies (which remain on your device for a set period or until deleted). These may include essential cookies for website operation, analytics cookies for performance tracking, and third-party cookies for integrations and marketing tools.
+</p>
+<p>
+  By continuing to use Astrosonix.in, you consent to our use of cookies as outlined in this policy. You may choose to manage or disable cookies through your browser settings at any time. However, please note that disabling certain cookies may affect the functionality and performance of our website.
+</p>
+<p>
+  If you have any questions about our use of cookies or your data, please contact us through the support details provided on our website.
+</p>
+
+        <!-- You can expand with more sections if needed -->
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Disclaimer Modal -->
+<div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 95%; margin: auto;">
+    <div class="modal-content rounded-3" style="background-color: #0b1437; color: white;">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title" id="disclaimerLabel">Disclaimer</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="max-height: 75vh; overflow-y: auto;">
+        <p><strong>Disclaimer</strong></p>
+<p>
+  All astrological services, readings, reports, and consultations provided by <strong>Astrosonix</strong>, a platform operated by UDYSONIX SERVICES PRIVATE LIMITED, are intended solely for informational and entertainment purposes. The guidance and insights offered through our services should not be considered a substitute for professional advice, whether medical, legal, financial, psychological, or otherwise.
+</p>
+<p>
+  While we strive to offer accurate and meaningful interpretations based on astrological principles, we do not guarantee the accuracy, completeness, or reliability of any predictions or information provided. The outcomes of any astrological consultation or report may vary from person to person, and ultimately, you are responsible for any decisions you choose to make.
+</p>
+<p>
+  By using our website or services, you acknowledge and agree that <strong>UDYSONIX SERVICES PRIVATE LIMITED</strong> and its team shall not be held liable for any loss, damage, or consequences arising directly or indirectly from your reliance on the information provided. We encourage users to exercise discretion and use our content as a supportive guide rather than a definitive solution.
+</p>
+
+        <!-- Add more clarification here if needed -->
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- DMCA Policy Modal -->
+<div class="modal fade" id="dmcaPolicyModal" tabindex="-1" aria-labelledby="dmcaPolicyLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 95%; margin: auto;">
+    <div class="modal-content rounded-3" style="background-color: #0b1437; color: white;">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title" id="dmcaPolicyLabel">DMCA Policy</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="max-height: 75vh; overflow-y: auto;">
+        <p><strong>DMCA Policy</strong></p>
+<p>
+  <strong>Astrosonix</strong>, operated by UDYSONIX SERVICES PRIVATE LIMITED, respects the intellectual property rights of others and is committed to complying with the provisions of the Digital Millennium Copyright Act (DMCA). We take copyright infringement claims seriously and will respond promptly to any valid notice of alleged infringement.
+</p>
+<p>
+  If you believe that your copyrighted work has been used or displayed on our platform in a manner that constitutes copyright infringement, please notify us by submitting a written notice containing the following information:
+</p>
+<ul class="list-disc list-inside ml-4">
+  <li>Your full name, contact details, and a physical or electronic signature.</li>
+  <li>Identification of the copyrighted work claimed to have been infringed.</li>
+  <li>A clear description of the material you believe is infringing, along with its location (URL or specific page) on our website.</li>
+  <li>A statement that you have a good faith belief that the use is not authorized by the copyright owner, their agent, or the law.</li>
+  <li>A statement, under penalty of perjury, that the information provided in your notice is accurate and that you are the copyright owner or authorized to act on their behalf.</li>
+</ul>
+<p>
+  Upon receiving a valid DMCA notice, we will take appropriate action, which may include removing or disabling access to the allegedly infringing content. Repeat infringement may result in the termination of user access to our services.
+</p>
+<p>
+  You may submit your DMCA notice or any related inquiries to our support team using the contact information provided on our website.
+</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Community Guidelines Modal -->
+<div class="modal fade" id="communityModal" tabindex="-1" aria-labelledby="communityLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 95%; margin: auto;">
+    <div class="modal-content rounded-3" style="background-color: #0b1437; color: white;">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title" id="communityLabel">Community Guidelines</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="max-height: 75vh; overflow-y: auto;">
+        <p><strong>Community Guidelines</strong></p>
+<p>
+  At <strong>Astrosonix</strong>, we are committed to fostering a safe, respectful, and inclusive environment for all users. These Community Guidelines are designed to ensure that our platform remains a space where everyone can engage positively, share insights, and seek astrological guidance without fear of discrimination, harassment, or misinformation.
+</p>
+<p>
+  By participating in any community interactions—such as forums, reviews, comments, or direct messages—you agree to uphold the following standards:
+</p>
+<ul class="list-disc list-inside ml-4">
+  <li>Engage respectfully with others, regardless of differences in opinion or belief.</li>
+  <li>Do not post or share content that is offensive, threatening, abusive, defamatory, or discriminatory in nature.</li>
+  <li>Avoid spreading false, misleading, or unverified information—especially related to health, legal, or astrological claims.</li>
+  <li>Respect the privacy of others; do not share personal data, images, or messages without consent.</li>
+  <li>Refrain from spamming, advertising, or promoting unrelated products or services.</li>
+</ul>
+<p>
+  Violations of these guidelines may result in removal of content, temporary suspensions, or permanent restrictions on your account. We reserve the right to moderate all user-generated content and take appropriate action when necessary.
+</p>
+<p>
+  If you observe behavior that violates these guidelines, please report it to our support team through the contact options available on our website. Together, we can maintain a positive and enriching experience for all members of the <strong>Astrosonix</strong> community.
+</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Accessibility Statement Modal -->
+<div class="modal fade" id="accessibilityModal" tabindex="-1" aria-labelledby="accessibilityLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 95%; margin: auto;">
+    <div class="modal-content rounded-3" style="background-color: #0b1437; color: white;">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-dark" style="background-color: #d4a967; border-bottom: 1px solid #d4a967;">
+        <h5 class="modal-title" id="accessibilityLabel">Accessibility Statement</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="max-height: 75vh; overflow-y: auto;">
+       <p><strong>Accessibility Statement</strong></p>
+<p>
+  At <strong>Astrosonix</strong>, we are committed to making our website and services accessible to all users, including individuals with disabilities. We believe everyone deserves equal access to spiritual guidance, content, and online tools, regardless of their physical or cognitive abilities.
+</p>
+<p>
+  We strive to adhere to best practices and standards defined by the Web Content Accessibility Guidelines (WCAG) to ensure our platform is perceivable, operable, understandable, and robust for all visitors. This includes making ongoing improvements to our website structure, navigation, color contrast, font readability, and compatibility with assistive technologies such as screen readers and keyboard navigation.
+</p>
+<p>
+  While we continuously work toward full accessibility compliance, we acknowledge that some areas of the site may still present challenges. If you encounter any accessibility barriers or require assistance accessing any part of the website, please do not hesitate to reach out to our support team. We are happy to provide alternative solutions or information in a format that works best for you.
+</p>
+<p>
+  Your feedback is important to us. If you have suggestions for improving the accessibility of <strong>Astrosonix</strong>, please contact us using the details provided on our website. We are dedicated to making our platform as inclusive and user-friendly as possible.
+</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+         <section class="as_footer_wrapper as_section_dark">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="as_footer_inner  ">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6 col-sm-12">
+                              <div class="as_footer_widget">
+                                 <div class="as_footer_logo">
+                                    <a href="index.html"><img src="assets/img/Frame 1000001281.png" style="width: 130px;" alt=""></a>
+                                 </div>
+                                 <p>Astrosonix offers many paths to your destiny.</p>
+                                 <ul class="as_contact_list">
+                                    <li>
+                                       <img src="assets/images/svg/map.svg" alt="">
+                                       <p>A/202, Brindaban Kunj, Exhibition Road, Near Landmark: C/o Diwakar Sandilya, Kadamkuan, Patna, Patna District, Bihar – 800001, India</p>
+                                    </li>
+                                    
+                                    <li>
+                                       <img src="assets/images/svg/mail.svg" alt="">
+                                       <p>
+                                          <a href="javascript:;">Compliance.udysonix@outlook.com</a>
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-lg-3 col-md-6 col-sm-12">
+                              <div class="as_footer_widget">
+                                <h3 class="as_footer_heading">Quick Links</h3>
+                                 <ul>
+                                    <li>
+  <a href="privacy.html" target="_blank">Privacy Policy</a>
+</li>
+
+
+         <li>
+  <a href="refund.html" target="_blank">Refund Policy</a>
+</li>                            
+
+<li>
+  <a href="terms.html" target="_blank">Terms & Conditions</a>
+</li>       
+                                  
+
+                                    <li>
+  <a href="cookies.html" target="_blank">Cookies Policy</a>
+</li>  
+
+                                   
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-lg-3 col-md-6 col-sm-12">
+                              <div class="as_footer_widget">
+                                 <h3 class="as_footer_heading">Quick Links</h3>
+                                  <ul>
+                                    <li>
+  <a href="disclaimer.html" target="_blank" >Disclaimer</a>
+</li>
+<li>
+  <a href="dmca.html" target="_blank" >DMCA Policy</a>
+</li>
+                                  
+  
+                                  <li>
+  <a href="community.html" target="_blank">Community Guidelines</a>
+</li>
+
+                                  <li>
+  <a href="accessibility.html" target="_blank" >Accessibility Statement</a>
+</li>
+
+                                   
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-lg-3 col-md-6 col-sm-12">
+                              <div class="as_footer_widget">
+                                 <h3 class="as_footer_heading">Our Newsletter</h3>
+                                 <p>Subscribe to receive weekly horoscope updates, spiritual tips, and exclusive astrology insights—straight to your inbox. </p>
+                                 <div class="as_newsletter_wrapper">
+                                    <div class="as_newsletter_box">
+                                       <input type="text" name="" id="" class="form-control" placeholder="Email...">
+                                       <a href="javascript:;" class="as_btn as_btn_newsletter">
+                                       <img src="assets/images/svg/plane.svg" alt="">
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="as_login_data">
+                                    <label>I agree that my submitted data is
+                                    being collected and stored.
+                                    <input type="checkbox" name="as_remember_me" value="">
+                                    <span class="checkmark"></span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section>
+            <div class="as_copyright_wrapper text-center">
+              <p>Copyright &copy; 2025 UDYSONIX SERVICES PRIVATE LIMITED. All Right Reserved.</p>
+            </div>
+         </section>
+      </div>
+      <!-- javascript -->
+      <script src="assets/js/jquery.js"></script>
+      <script src="assets/js/bootstrap.js"></script>
+      <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+      <script src="assets/js/custom.js"></script>  
+   </body>
+</html>
