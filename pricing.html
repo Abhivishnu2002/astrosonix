@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-   <link rel="shortcut icon" href="assets/images/loader.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/images/loader.png" type="image/x-icon">
   <title>Astrosonix</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-black font-sans">
 
 
 
   <!-- Progress Indicator -->
-  <div class="max-w-3xl mx-auto mt-8 bg-[#111111] p-4 border border-[#d4a967] rounded shadow text-gray-300 text-sm flex items-center space-x-4">
+  <div
+    class="max-w-3xl mx-auto mt-8 bg-[#111111] p-4 border border-[#d4a967] rounded shadow text-gray-300 text-sm flex items-center space-x-4">
     <div class="font-medium text-white">Account</div>
     <div class="flex-1 h-px bg-[#d4a967]"></div>
     <div class="text-gray-500">Payment</div>
@@ -22,7 +25,7 @@
   <div class="max-w-3xl mx-auto mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
 
     <!-- Left Form -->
-   <div class="bg-black text-white p-6 rounded-lg shadow border border-[#d4a967]">
+    <div class="bg-black text-white p-6 rounded-lg shadow border border-[#d4a967]">
 
       <!-- Billing & Account -->
       <h2 class="text-xl font-bold mb-4">Create Account & Payment</h2>
@@ -30,23 +33,11 @@
         <input type="text" placeholder="Full Name" class="w-full p-3 border rounded" />
         <input type="email" placeholder="Email" class="w-full p-3 border rounded" />
         <div class="flex items-center space-x-2">
-          <input id="paypal" type="radio" name="paymethod" checked class="h-4 w-4"/>
-          <label for="paypal" class="flex-1 p-3 border rounded hover:bg-[#222222] hover:text-white cursor-pointer">
-            PayPal <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" class="inline h-5 ml-2"/>
+          <input id="cod" type="radio" name="paymethod" checked class="h-4 w-4 accent-[#d4a967]" />
+          <label for="cod"
+            class="flex-1 p-3 border border-[#d4a967] rounded bg-[#222222] text-[#d4a967] cursor-pointer font-semibold">
+            Cash on Delivery (COD)
           </label>
-        </div>
-        <div class="flex items-center space-x-2">
-          <input id="card" type="radio" name="paymethod" class="h-4 w-4"/>
-          <label for="card" class="flex-1 p-3 border rounded hover:bg-[#222222] hover:text-white cursor-pointer">Credit / Debit Card</label>
-        </div>
-
-        <!-- Card Inputs -->
-        <div id="card-fields" class="space-y-3 mt-2 hidden">
-          <input type="text" placeholder="Card Number" class="w-full p-3 border rounded" />
-          <div class="grid grid-cols-2 gap-3">
-            <input type="text" placeholder="MM / YY" class="p-3 border rounded" />
-            <input type="text" placeholder="CVV" class="p-3 border rounded" />
-          </div>
         </div>
 
         <!-- Submit -->
@@ -71,7 +62,8 @@
 
         <!-- Summary Details -->
         <div class="border-t pt-4 space-y-2 text-gray-300">
-          <div class="flex justify-between text-white"><span>Plan:</span><span class="font-semibold">Premium</span></div>
+          <div class="flex justify-between text-white"><span>Plan:</span><span class="font-semibold">Premium</span>
+          </div>
           <div class="flex justify-between text-white"><span>Subtotal:</span><span>₹4999</span></div>
           <div class="flex justify-between text-white"><span>Taxes:</span><span>₹450</span></div>
         </div>
@@ -82,11 +74,6 @@
     </div>
 
   </div>
-
-  <!-- JS to toggle card fields -->
-  <script>
-    document.getElementById('paypal').onchange = () => document.getElementById('card-fields').classList.add('hidden');
-    document.getElementById('card').onchange = () => document.getElementById('card-fields').classList.remove('hidden');
-  </script>
 </body>
+
 </html>

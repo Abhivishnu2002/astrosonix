@@ -4901,36 +4901,49 @@ section.as_testimonial_wrapper {
 }
 
 /* ==========================================================================
-   Responsive Grid & Equal-Height Card Alignment Overrides
+   Responsive Grid & Equal-Height Card Alignment Overrides (Global & Mobile)
    ========================================================================== */
 
-/* 1. General Card Alignment and Equal Heights (Desktop and Tablet) */
+/* 1. Global Equal-Height column configurations (Desktop, Tablet, Laptop) */
 
-/* Pricing Plan Box */
+/* Enable flex-stretch layouts on the grid columns */
+.as_pricing_plan .row > div,
+.as_horoscope_wrapper .row > div,
+.as_blog_wrapper .row > div,
+.as_product_wrapper .row > div,
+.as_shop_page .row > div {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Pricing Plan Box stretch & button bottom alignment */
 .as_pricing_box {
     display: flex !important;
     flex-direction: column !important;
-    height: calc(100% - 30px) !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 .as_pricing_box .as_btn {
     margin-top: auto !important; /* Push button to bottom */
 }
 
-/* Astrologers Cards */
+/* Astrologers Cards stretch & bottom divider alignment */
 .as_sign_box {
     display: flex !important;
     flex-direction: column !important;
-    height: calc(100% - 30px) !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 .as_sign_box hr {
-    margin-top: auto !important; /* Push hr and footer to bottom */
+    margin-top: auto !important; /* Push hr & footer to bottom */
 }
 
-/* Blog Articles */
+/* Blog Articles stretch & button bottom alignment */
 .as_blog_box {
     display: flex !important;
     flex-direction: column !important;
-    height: calc(100% - 30px) !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 .as_blog_box .as_blog_detail {
     flex-grow: 1 !important;
@@ -4938,14 +4951,15 @@ section.as_testimonial_wrapper {
     flex-direction: column !important;
 }
 .as_blog_box .as_blog_detail .as_btn {
-    margin-top: auto !important; /* Push button to bottom */
+    margin-top: auto !important; /* Push read more to bottom */
 }
 
-/* Popular Products */
+/* Popular Products stretch & detail bottom alignment */
 .as_product_box {
     display: flex !important;
     flex-direction: column !important;
-    height: calc(100% - 30px) !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 .as_product_detail {
     flex-grow: 1 !important;
@@ -4954,16 +4968,12 @@ section.as_testimonial_wrapper {
     justify-content: space-between !important;
 }
 
-/* Service Box */
-.as_service_box {
-    height: calc(100% - 30px) !important;
-}
-
-/* Horoscope/Category Cards */
+/* Horoscope/Category Cards stretch */
 .as_horoscope_wrapper .text-center.p-4 {
-    height: calc(100% - 30px) !important;
     display: flex !important;
     flex-direction: column !important;
+    width: 100% !important;
+    height: 100% !important;
     justify-content: center !important;
     align-items: center !important;
 }
@@ -4971,33 +4981,26 @@ section.as_testimonial_wrapper {
 
 /* 2. Responsive Mobile Layout Overrides (max-width: 575px) */
 @media (max-width: 575px) {
-    /* Keep the default col-6 grid (2 columns per row) on mobile screens */
-    
-    /* Adjust equal heights to account for 15px mobile spacing */
+    /* Set mobile margins on cards */
     .as_pricing_box {
-        height: calc(100% - 15px) !important;
         margin-top: 15px !important;
         margin-bottom: 0 !important;
         padding: 15px 8px !important; /* Compact padding */
     }
     .as_sign_box {
-        height: calc(100% - 15px) !important;
         margin-top: 15px !important;
         margin-bottom: 0 !important;
         padding: 10px !important; /* Compact padding */
     }
     .as_blog_box {
-        height: calc(100% - 15px) !important;
         margin-top: 15px !important;
         margin-bottom: 0 !important;
     }
     .as_product_box {
-        height: calc(100% - 15px) !important;
         margin-top: 15px !important;
         margin-bottom: 0 !important;
     }
     .as_horoscope_wrapper .text-center.p-4 {
-        height: calc(100% - 15px) !important;
         margin-top: 15px !important;
         margin-bottom: 0 !important;
         padding: 15px 5px !important;
@@ -5151,5 +5154,6 @@ section.as_testimonial_wrapper {
         font-size: 11px !important;
     }
 }
+
 
 
