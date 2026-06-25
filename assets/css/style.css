@@ -5155,5 +5155,82 @@ section.as_testimonial_wrapper {
     }
 }
 
+/* ==========================================
+   Astrologer AI Chatbot Styles
+   ========================================== */
+
+#chatMessagesContainer::-webkit-scrollbar {
+    width: 6px;
+}
+#chatMessagesContainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+#chatMessagesContainer::-webkit-scrollbar-thumb {
+    background: rgba(212, 169, 103, 0.3);
+    border-radius: 4px;
+}
+#chatMessagesContainer::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 169, 103, 0.5);
+}
+
+.chat-bubble-user {
+    background: #d4a967 !important;
+    color: #121212 !important;
+    max-width: 85%;
+    border-radius: 16px 16px 0px 16px !important;
+    box-shadow: 0 4px 15px rgba(212, 169, 103, 0.2);
+    padding: 12px 16px !important;
+    margin-left: auto;
+    font-size: 13.5px;
+    line-height: 1.5;
+    border: none !important;
+}
+
+.chat-bubble-ai {
+    background: rgba(255, 255, 255, 0.07) !important;
+    color: #f8f9fa !important;
+    max-width: 85%;
+    border-radius: 16px 16px 16px 0px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 12px 16px !important;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.chat-typing-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.chat-typing-dots span {
+    width: 6px;
+    height: 6px;
+    background: #d4a967;
+    border-radius: 50%;
+    display: inline-block;
+    animation: chatTypingBounce 1.4s infinite both;
+}
+.chat-typing-dots span:nth-child(2) { animation-delay: .2s; }
+.chat-typing-dots span:nth-child(3) { animation-delay: .4s; }
+
+@keyframes chatTypingBounce {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Fix stretched link behavior on astrologer card when button is clicked */
+.as_sign_box {
+    position: relative;
+}
+.as_sign_box .btn {
+    position: relative;
+    z-index: 5; /* Raise buttons above the stretched-link card clickable area */
+}
+.as_sign_box .stretched-link {
+    z-index: 1;
+}
+
+
 
 

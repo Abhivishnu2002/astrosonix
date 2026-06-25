@@ -210,7 +210,7 @@
     }
 
     // ✅ Step 1: Check login API
-    fetch("https://razal.pythonanywhere.com/api/login/", {
+    fetch("http://127.0.0.1:8000/api/login/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ identifier: phone })
@@ -277,7 +277,7 @@
       return;
     }
 
-    fetch("https://razal.pythonanywhere.com/api/send_email_otp/", {
+    fetch("http://127.0.0.1:8000/api/send_email_otp/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email })
@@ -307,7 +307,7 @@
       return;
     }
 
-    fetch("https://razal.pythonanywhere.com/api/verify_email_otp/", {
+    fetch("http://127.0.0.1:8000/api/verify_email_otp/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email, otp: otp })
@@ -444,7 +444,7 @@
         alert("✅ Phone verified!");
 
         // ✅ Send data to API
-        fetch("https://razal.pythonanywhere.com/api/signup/", {
+        fetch("http://127.0.0.1:8000/api/signup/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1927,5 +1927,48 @@ Confused about love, career, or life decisions? <br> Our expert astrologers are 
       <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
       <script src="assets/js/custom.js"></script> 
       
+      <!-- Astrologer AI Chat Modal -->
+      <div class="modal fade" id="astroChatModal" tabindex="-1" aria-labelledby="astroChatModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 480px; width: 95%;">
+          <div class="modal-content text-white" style="background: rgba(18, 15, 27, 0.96) !important; border: 1px solid #d4a967 !important; backdrop-filter: blur(12px); border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+            
+            <!-- Modal Header -->
+            <div class="modal-header d-flex align-items-center justify-content-between py-3" style="border-bottom: 1px solid rgba(212, 169, 103, 0.25) !important; background-color: rgba(10, 8, 16, 0.98) !important;">
+              <div class="d-flex align-items-center">
+                <div class="position-relative">
+                  <img id="chatAstroImg" src="" alt="Astrologer" class="rounded-circle border border-warning" width="48" height="48" style="object-fit: cover;">
+                  <span class="position-absolute bottom-0 end-0 bg-success border border-white rounded-circle animate-pulse" style="width: 11px; height: 11px; outline: 2px solid #120f1b;"></span>
+                </div>
+                <div class="ms-3 text-start">
+                  <h6 class="modal-title fw-bold mb-0 text-white" id="chatAstroName" style="color: #d4a967 !important;">Astrologer Name</h6>
+                  <small class="small text-muted" id="chatAstroSpecialty" style="font-size: 11px; font-family: 'Poppins', sans-serif;"></small>
+                </div>
+              </div>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1) grayscale(1) brightness(1.5);"></button>
+            </div>
+
+            <!-- Chat Body -->
+            <div class="modal-body p-3 d-flex flex-column" id="chatMessagesContainer" style="height: 380px; overflow-y: auto; font-family: 'Poppins', sans-serif; background-color: transparent !important;">
+              <!-- Welcome message and chat log gets rendered here -->
+            </div>
+
+            <!-- Chat Footer / Input Form -->
+            <div class="modal-footer p-2" style="border-top: 1px solid rgba(212, 169, 103, 0.2) !important; background: rgba(10, 8, 16, 0.95) !important;">
+              <form id="astroChatForm" class="d-flex w-100 align-items-center">
+                <input type="text" id="chatInput" class="form-control text-white bg-dark border-0 py-2 px-3 rounded-pill me-2" placeholder="Ask about love, career, health..." style="font-size: 13.5px; outline: none; box-shadow: none;" required>
+                <button type="submit" class="btn p-2 rounded-circle d-flex align-items-center justify-content-center" style="background: #d4a967; width: 40px; height: 40px; border: none; flex-shrink: 0; transition: transform 0.2s ease;">
+                  <i class="bi bi-send-fill text-dark" style="font-size: 15px; margin-left: 2px;"></i>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Authentication UI & Gating -->
+      <script src="assets/js/auth.js?v=1.4"></script>
+      <!-- AI Chat integration logic -->
+      <script src="assets/js/ai-chat.js?v=1.4"></script>
    </body>
 </html>

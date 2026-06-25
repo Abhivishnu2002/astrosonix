@@ -201,7 +201,7 @@
     }
 
     // ✅ Step 1: Check login API
-    fetch("https://razal.pythonanywhere.com/api/login/", {
+    fetch("http://127.0.0.1:8000/api/login/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ identifier: phone })
@@ -267,7 +267,7 @@
       return;
     }
 
-    fetch("https://razal.pythonanywhere.com/api/send_email_otp/", {
+    fetch("http://127.0.0.1:8000/api/send_email_otp/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email })
@@ -297,7 +297,7 @@
       return;
     }
 
-    fetch("https://razal.pythonanywhere.com/api/verify_email_otp/", {
+    fetch("http://127.0.0.1:8000/api/verify_email_otp/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email, otp: otp })
@@ -432,7 +432,7 @@
         alert("✅ Phone verified!");
 
         // ✅ Send data to API
-        fetch("https://razal.pythonanywhere.com/api/signup/", {
+        fetch("http://127.0.0.1:8000/api/signup/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1468,5 +1468,7 @@
       <script src="assets/js/bootstrap.js"></script>
       <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
       <script src="assets/js/custom.js"></script>  
+      <!-- Dynamic Authentication UI & Gating -->
+      <script src="assets/js/auth.js?v=1.4"></script>
    </body>
 </html>
