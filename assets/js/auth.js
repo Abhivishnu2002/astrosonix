@@ -457,6 +457,7 @@
         if (data.message === "Login success") {
           localStorage.setItem("auth_token", data.token);
           localStorage.setItem("full_name", data.full_name || "User");
+          localStorage.setItem("email", email);
           
           const modalEl = document.getElementById("signInModal");
           if (modalEl) {
@@ -545,6 +546,7 @@
       .then(data => {
         localStorage.setItem("auth_token", data.token);
         localStorage.setItem("full_name", data.full_name || name);
+        localStorage.setItem("email", email);
         
         const modalEl = document.getElementById("signUpModal");
         if (modalEl) {
