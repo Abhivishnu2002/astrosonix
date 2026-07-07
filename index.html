@@ -1335,7 +1335,7 @@ Confused about love, career, or life decisions? <br> Our expert astrologers are 
                         </div>
                      </div>
                      <div class="text-center ">
-                        <a href="javascript:;" class="as_btn as_margin_top_40">view more</a>
+                        <a href="shop.html" class="as_btn as_margin_top_40">view more</a>
                      </div>
                   </div>
                </div>
@@ -1391,7 +1391,7 @@ Confused about love, career, or life decisions? <br> Our expert astrologers are 
                                     </ul>
                                     <h4 class="as_subheading"><a href=""> How Your Zodiac Affects Daily Energy.</a></h4>
                                     <p class="as_text_color">Explore how planetary movements influence your mood, mindset, and decisions throughout the day. Learn to align with your sign. </p>
-                                    <a href="javascript:;" class="as_btn ">Read More</a>
+                                    <a href="javascript:;" class="as_btn" data-blog-id="1" onclick="openBlogPopup(1)">Read More</a>
                                  </div>
                               </div>
                            </div>
@@ -1425,7 +1425,7 @@ Confused about love, career, or life decisions? <br> Our expert astrologers are 
                                     </ul>
                                     <h4 class="as_subheading"><a href=""> Vastu Tips to Bring Harmony at Home</a></h4>
                                     <p class="as_text_color">Discover simple Vastu adjustments that can enhance peace, prosperity, and positivity in your living space.</p>
-                                    <a href="javascript:;" class="as_btn ">Read More</a>
+                                    <a href="javascript:;" class="as_btn" data-blog-id="2" onclick="openBlogPopup(2)">Read More</a>
                                  </div>
                               </div>
                            </div>
@@ -1459,7 +1459,7 @@ Confused about love, career, or life decisions? <br> Our expert astrologers are 
                                     </ul>
                                     <h4 class="as_subheading"><a href=""> Gemstones That Match Your Zodiac Sign</a></h4>
                                     <p class="as_text_color">Each zodiac sign resonates with certain gemstones. Find out which one brings balance and boosts your personal energy.</p>
-                                    <a href="javascript:;" class="as_btn ">Read More</a>
+                                    <a href="javascript:;" class="as_btn" data-blog-id="3" onclick="openBlogPopup(3)">Read More</a>
                                  </div>
                               </div>
                            </div>
@@ -1974,6 +1974,133 @@ Confused about love, career, or life decisions? <br> Our expert astrologers are 
           </div>
         </div>
       </div>
+
+      <!-- Blog Popup Modal -->
+      <div id="blogPopupOverlay" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(10,6,20,0.85); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:20px; overflow-y:auto;">
+        <div id="blogPopupBox" style="position:relative; max-width:760px; width:100%; margin:auto; background:linear-gradient(135deg,#1a1228 0%,#0f0a1e 100%); border:1px solid rgba(212,169,103,0.35); border-radius:20px; box-shadow:0 30px 80px rgba(0,0,0,0.7); overflow:hidden; animation:blogPopupIn 0.35s cubic-bezier(0.34,1.56,0.64,1);">
+          <!-- Close button -->
+          <button onclick="closeBlogPopup()" style="position:absolute; top:18px; right:18px; z-index:10; background:rgba(212,169,103,0.15); border:1px solid rgba(212,169,103,0.4); color:#d4a967; width:38px; height:38px; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s; line-height:1;" onmouseover="this.style.background='rgba(212,169,103,0.35)'" onmouseout="this.style.background='rgba(212,169,103,0.15)'">&#x2715;</button>
+          <!-- Hero image -->
+          <div id="blogPopupImgWrap" style="width:100%; height:260px; overflow:hidden;">
+            <img id="blogPopupImg" src="" alt="Blog" style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <!-- Content -->
+          <div style="padding:36px 40px 40px;">
+            <div id="blogPopupMeta" style="display:flex; align-items:center; gap:18px; margin-bottom:14px; font-size:13px; color:#a89ac0; font-family:'Poppins',sans-serif;"></div>
+            <h2 id="blogPopupTitle" style="font-family:'Playfair Display',Georgia,serif; color:#d4a967; font-size:1.75rem; margin:0 0 18px; line-height:1.3;"></h2>
+            <div id="blogPopupBody" style="color:#c8bfe0; font-size:15px; line-height:1.85; font-family:'Poppins',sans-serif;"></div>
+            <div style="margin-top:28px; padding-top:24px; border-top:1px solid rgba(212,169,103,0.2); display:flex; align-items:center; gap:14px;">
+              <img id="blogPopupAuthorImg" src="" alt="Author" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid #d4a967;">
+              <div>
+                <div id="blogPopupAuthorName" style="color:#d4a967;font-weight:600;font-size:14px;font-family:'Poppins',sans-serif;"></div>
+                <div style="color:#7c6e9a;font-size:12px;font-family:'Poppins',sans-serif;">Certified Astrologer &amp; Author</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        @keyframes blogPopupIn {
+          from { opacity:0; transform:scale(0.88) translateY(30px); }
+          to   { opacity:1; transform:scale(1) translateY(0); }
+        }
+      </style>
+      <script>
+        var blogData = {
+          1: {
+            title: "How Your Zodiac Affects Daily Energy",
+            img: "assets/img/blog1.png",
+            author: "Premansh",
+            authorImg: "assets/img/astro-premansh-7423948023080646.jpg",
+            date: "June 12, 2025",
+            readTime: "5 min read",
+            body: `
+              <p>Every morning you wake up, the planets are in motion — and that motion quietly shapes your mood, energy levels, and mental clarity. Whether you believe in astrology or not, countless people report that their energy feels "off" on certain days and electric on others. Understanding your zodiac sign is one key to decoding this cosmic rhythm.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">🔥 Fire Signs (Aries, Leo, Sagittarius)</h3>
+              <p>Fire signs are most energised during bold, active days when Mars or the Sun transits through your sector. Mornings tend to be your power hour — use them for high-priority decisions and creative work. When Mercury goes retrograde, your usual confidence can feel disrupted; take that as a signal to rest and reflect.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">🌊 Water Signs (Cancer, Scorpio, Pisces)</h3>
+              <p>Water signs are deeply influenced by lunar cycles. You may notice mood swings around the Full Moon — this is perfectly natural. Journaling, meditation, and spending time near water can help you ground your heightened sensitivity and turn it into intuitive clarity.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">🌍 Earth Signs (Taurus, Virgo, Capricorn)</h3>
+              <p>Earth signs function best with routine and structure. Venus transits often bring bursts of creative and sensory pleasure. When Saturn squares your natal chart, you might feel unusually fatigued — honour that slowdown; it is the universe asking you to consolidate rather than expand.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">💨 Air Signs (Gemini, Libra, Aquarius)</h3>
+              <p>Air signs thrive on mental stimulation. Your energy peaks during Mercury and Jupiter transits. Social interactions charge your batteries like nothing else. The challenge comes when too many planetary retrogrades coincide — your scattered mind needs an anchor like breathwork or a structured to-do list.</p>
+              <p style="margin-top:20px;">Learning to <strong style="color:#d4a967;">align your daily schedule with planetary energy</strong> — not fight against it — can transform ordinary days into opportunities for flow, creativity, and deep connection. Start by noting how you feel each morning alongside the day's planetary positions. Patterns will emerge within a month.</p>
+            `
+          },
+          2: {
+            title: "Vastu Tips to Bring Harmony at Home",
+            img: "assets/img/blog2.png",
+            author: "Astro Sahib",
+            authorImg: "assets/img/astro-sahib-7615876426762961.jpg",
+            date: "May 28, 2025",
+            readTime: "7 min read",
+            body: `
+              <p>Vastu Shastra — the ancient Indian science of spatial arrangement — holds that the energy flowing through your home directly influences the well-being, prosperity, and harmony of everyone who lives there. Small, intentional adjustments can create a profound shift in the atmosphere of your living space.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">🧭 The Power of Directions</h3>
+              <p>Each direction corresponds to a natural element and its associated energy. The <strong style="color:#d4a967;">North-East</strong> (Ishaan) corner is sacred — keep it clean, uncluttered, and ideally host a small prayer space or indoor plant there. Heavy furniture, toilets, or storage in this corner blocks divine energy from entering the home.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">🌅 Entrance & Main Door</h3>
+              <p>The main door is the gateway through which prana (life force) enters. Ensure it opens inward, is well-lit, and free from squeaking or broken hinges. Placing a Swastik symbol, rangoli, or fresh flowers outside welcomes positive energy. Avoid placing dustbins, broken items, or shoe racks right at the entrance.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">🛏 Bedroom Positioning</h3>
+              <p>Sleep with your head pointing <strong style="color:#d4a967;">South or East</strong> for restful sleep and better health. Mirrors facing the bed reflect energy, potentially causing restlessness — cover them at night or reposition them. Remove electronics from the bedside as their electromagnetic fields disturb the subtle energy field around you while you sleep.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">🌿 Plants & Colours</h3>
+              <p>Plants like Tulsi, Money Plant (in the North), and Bamboo bring vitality. Avoid cacti and bonsai indoors as they emit contracting energy. Colours matter too — soft yellows and greens in the kitchen bring nourishment energy, while blues and whites in the bedroom foster calm. Avoid deep reds in children's rooms.</p>
+              <p style="margin-top:20px;">Even if you cannot make structural changes, simple decluttering, good lighting, and mindful placement of objects can begin to restore the Vastu balance in your space. Harmony at home starts with one intentional step.</p>
+            `
+          },
+          3: {
+            title: "Gemstones That Match Your Zodiac Sign",
+            img: "assets/img/blog3.png",
+            author: "Mahalakshmi",
+            authorImg: "assets/img/astro-mahalakshmi-15970505785.jpg",
+            date: "April 15, 2025",
+            readTime: "6 min read",
+            body: `
+              <p>For thousands of years, gemstones have been used as powerful conduits for planetary energies. In Vedic astrology, specific stones are recommended based on your birth chart to amplify beneficial planetary influences and mitigate challenging ones. Wearing the right gemstone can feel like wearing your personal talisman.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">♈ Aries &amp; Scorpio — Red Coral (Moonga)</h3>
+              <p>Ruled by Mars, these signs benefit from Red Coral, which strengthens vitality, courage, and leadership. It helps overcome delays and boosts physical energy. Wear it in gold on the ring finger of your right hand on a Tuesday morning after sunrise.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">♉ Taurus &amp; Libra — Diamond / White Sapphire (Heera / Safed Pukhraj)</h3>
+              <p>Venus-ruled signs resonate with Diamond or its substitute White Sapphire. These stones amplify love, beauty, creativity, and financial flow. They work best set in silver or platinum, worn on the middle finger on a Friday.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">♊ Gemini &amp; Virgo — Emerald (Panna)</h3>
+              <p>Mercury governs intellect, communication, and business. Emerald enhances clarity of thought, sharp memory, and eloquence. Students and entrepreneurs benefit greatly from this stone. Wear it in gold on the little finger on a Wednesday.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">♋ Cancer — Natural Pearl (Moti)</h3>
+              <p>Ruled by the Moon, Cancer natives benefit from Natural Pearl which brings emotional stability, intuition, and maternal blessings. Wear a pearl set in silver on the little finger on a Monday night.</p>
+              <h3 style="color:#d4a967;font-family:'Playfair Display',Georgia,serif;margin:24px 0 10px;font-size:1.15rem;">♌ Leo — Ruby (Manik)</h3>
+              <p>The Sun's gemstone, Ruby, empowers authority, self-confidence, and vitality. It is a powerful stone for leaders, politicians, and those seeking recognition. Wear it in gold on the ring finger of the right hand on a Sunday at sunrise.</p>
+              <p style="margin-top:20px;"><strong style="color:#d4a967;">Important:</strong> Always consult a qualified Vedic astrologer before wearing any gemstone. A stone that benefits one person can be counterproductive for another depending on their unique birth chart. Authenticity of the gem also matters — always source from trusted providers.</p>
+            `
+          }
+        };
+
+        function openBlogPopup(id) {
+          var data = blogData[id];
+          if (!data) return;
+          document.getElementById('blogPopupImg').src = data.img;
+          document.getElementById('blogPopupTitle').textContent = data.title;
+          document.getElementById('blogPopupBody').innerHTML = data.body;
+          document.getElementById('blogPopupAuthorName').textContent = 'By ' + data.author;
+          document.getElementById('blogPopupAuthorImg').src = data.authorImg;
+          document.getElementById('blogPopupMeta').innerHTML =
+            '<span>&#128197; ' + data.date + '</span><span style="color:#d4a967;">&#9679;</span><span>&#9201; ' + data.readTime + '</span>';
+          var overlay = document.getElementById('blogPopupOverlay');
+          overlay.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeBlogPopup() {
+          document.getElementById('blogPopupOverlay').style.display = 'none';
+          document.body.style.overflow = '';
+        }
+
+        // Close on backdrop click
+        document.getElementById('blogPopupOverlay').addEventListener('click', function(e) {
+          if (e.target === this) closeBlogPopup();
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') closeBlogPopup();
+        });
+      </script>
 
       <!-- Dynamic Authentication UI & Gating -->
       <script src="assets/js/auth.js?v=1.4"></script>
